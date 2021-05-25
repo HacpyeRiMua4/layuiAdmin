@@ -1,7 +1,6 @@
 layui.use(['layer', 'form','element','jquery'], function(){
 	var layer 	= layui.layer;
 	var element = layui.element();
-	var form    =layui.form();
 	var $=layui.jquery;
 	var hideBtn=$('#hideBtn');
 	var mainLayout=$('#main-layout');
@@ -32,7 +31,6 @@ layui.use(['layer', 'form','element','jquery'], function(){
 						  id: id
 						});  
 						element.tabChange('tab', id);
-						form.render();
 					},1000);
 					
 				}
@@ -50,7 +48,6 @@ layui.use(['layer', 'form','element','jquery'], function(){
 			mainLayout.removeClass('hide-side');
 		}
 	})
-	//默认加载welcome
 	var index = layer.load(2);
 	$.ajax({
 		type:"get",
@@ -63,5 +60,4 @@ layui.use(['layer', 'form','element','jquery'], function(){
 			
 		}
 	});
-	
 });
